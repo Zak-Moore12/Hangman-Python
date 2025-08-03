@@ -8,6 +8,7 @@ if not os.path.exists("leaderboard.txt"):
     with open("leaderboard.txt", "w") as file:
         file.write("{:<15}{:^10}{:^20}\n".format("Username", "Streak", "Accumulated Score"))
 
+# Check if that username already exists in the leaderboard. 
 def username_exists(username):
     try:
         with open("leaderboard.txt", "r") as file:

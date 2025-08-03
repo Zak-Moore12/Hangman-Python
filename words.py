@@ -1,3 +1,5 @@
+# Contains the list of countries used for this hangman game. 
+
 countries = [
   'Afghanistan',
   'Albania',

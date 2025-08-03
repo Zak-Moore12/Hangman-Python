@@ -5,11 +5,13 @@ class ScoreTracker:
         self.cumulative_attempts = 0
         self.username = username
 
+    # Updates the users streak and accumulated score after the word has been guessed.
     def append_score(self, word, attempts_left):
         self.streak += 1
         self.correctly_guessed.append(word)
         self.cumulative_attempts += attempts_left
 
+    # Prints the users current streak and accumulated score to the screen. 
     def display(self):
         print("\nStreak:", self.streak)
         print("Correctly guessed countries:")
@@ -17,12 +19,14 @@ class ScoreTracker:
             print(" -", country)
         print("Total accumulated attempts from wins:", self.cumulative_attempts)
 
+    # Reset player streak and accumulated score.
     def reset(self):
         self.streak = 0
         self.correctly_guessed.clear()
         self.cumulative_attempts = 0
         print("\nScore Reset.")
 
+    # Updates the leaderboard with the highest score for that username. 
     def leaderboard(self):
         lines = []
         found = False
