@@ -2,6 +2,8 @@ import hangman
 from scores import ScoreTracker
 import os
 
+
+# Check if the leaderboard file exists. 
 if not os.path.exists("leaderboard.txt"):
     with open("leaderboard.txt", "w") as file:
         file.write("{:<15}{:^10}{:^20}\n".format("Username", "Streak", "Accumulated Score"))
